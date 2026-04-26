@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import "tailwindcss";
+
+a.active hr{
+    display:block;
+}
+*{
+   font-family: Outfit;
+}
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+@media(max-width:640px) {
+  a.active{
+    background-color: black;
+    color: white;
+  }
+  
+}
+.payment-card {
+  @apply flex items-center justify-center gap-3 border border-gray-300 rounded-md px-5 py-4 cursor-pointer min-w-[120px] transition;
+}
+
+.payment-card.active {
+  @apply border-black bg-gray-100;
+}
+
+.radio {
+  @apply w-4 h-4 border border-gray-400 rounded-full flex items-center justify-center;
+}
+
+.payment-card.active .radio {
+  @apply border-black;
+}
+
+.payment-card.active .radio::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+}
+.payment-card:hover {
+  @apply shadow-md;
+}
